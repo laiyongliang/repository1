@@ -1,0 +1,36 @@
+#服务器端口号和访问服务名称
+server:
+  port: 8082
+  servlet:
+    context-path: /hello
+
+#数据库连接
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testdatabase?serverTimezone=UTC&charachterEncoding=utf8
+    username: lai
+    password: pass1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  #集成Redis缓存
+  redis:
+    host: localhost
+    port: 6379
+
+
+#配置mybatis的信息
+mybatis:
+  #pojo别名包扫描
+  type-aliases-package: com.hand.domain
+  #加载mapper映射文件
+  mapper-locations: classpath:*Mapper.xml
+
+
+
+
+
+
+
+
+
+
